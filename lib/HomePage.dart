@@ -13,12 +13,12 @@ class _HomePageState extends State<HomePage> {
   TextEditingController titleController = TextEditingController();
   List<Note> notes = [];
 
-  void toNoteDetails(int num) {
+  void toNoteDetails(int index) {
     Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => NoteDetails(
-          noteID: num,
+          noteID: index,
         ),
       ),
     ).then((value) => setState(() {}));
